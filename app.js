@@ -122,7 +122,19 @@
     var total = countAvailable();
     var pct = total ? Math.round((done / total) * 100) : 0;
 
+    var allDone = total > 0 && done >= total;
+    var noteText = allDone
+      ? done + ' / ' + total + ' 완료 · 1.0 코스 완주!'
+      : done + ' / ' + total + ' 완료 · 하루 5분이면 한 장씩!';
+    var completeBanner = allDone
+      ? '<section class="learn-complete-banner fade-in-scroll is-visible" role="status">' +
+        '<p class="learn-complete-banner__title">7장 모두 완료!</p>' +
+        '<p class="learn-complete-banner__body">입문·실전 1.0을 끝냈어요. 이제 뉴스·지도를 다르게 볼 수 있어요.</p>' +
+        '</section>'
+      : '';
+
     var progressHtml =
+      completeBanner +
       '<div class="learn-progress fade-in-scroll is-visible">' +
       '<div class="learn-progress__head">' +
       '<span class="learn-progress__label">내 진행률</span>' +
@@ -131,7 +143,7 @@
       '<div class="learn-progress__track" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100">' +
       '<div class="learn-progress__fill" style="width:' + pct + '%"></div>' +
       '</div>' +
-      '<p class="learn-progress__note">' + done + ' / ' + total + ' 완료 · 하루 5분이면 이번 주 안에 한 장 끝!</p>' +
+      '<p class="learn-progress__note">' + noteText + '</p>' +
       '</div>';
 
     var cards = MODULES.map(function (mod) {

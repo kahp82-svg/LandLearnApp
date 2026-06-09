@@ -27,7 +27,9 @@
 
 ## 다음 작업
 
-2장 `lessons/02-timing.html` 작성 → `app.js`에서 `available: true`
+- **배포**: [docs/DEPLOY.md](docs/DEPLOY.md) — GitHub Pages · dothome `/app/`
+- **dothome 업로드**: `업로드-dothome.bat` (FTP 비밀번호)
+- **홈피 연결**: ServerTest `배우기` → `/app/` (ServerTest도 업로드 필요)
 
 ---
 

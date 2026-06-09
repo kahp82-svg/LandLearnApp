@@ -543,6 +543,27 @@ a.learn-module:hover {
   transform: translateY(-2px);
 }
 
+.learn-complete-banner {
+  margin-bottom: 0.5rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(52, 211, 153, 0.5);
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+  text-align: center;
+}
+.learn-complete-banner__title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #047857;
+}
+.learn-complete-banner__body {
+  margin: 0;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
 @media (hover: none) {
   .glass-card.is-visible:hover {
     transform: none;
@@ -578,5 +599,26 @@ a.learn-module:hover {
   }
   main {
     padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0)) !important;
+  }
+  .learn-lesson-actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    margin: 0 -0.25rem;
+    padding: 0.75rem 0.25rem calc(0.75rem + env(safe-area-inset-bottom, 0));
+    background: linear-gradient(to top, rgba(248, 250, 252, 0.98) 70%, transparent);
+  }
+  .learn-complete-btn {
+    max-width: none;
+    font-size: 0.9375rem;
+  }
+  .learn-module {
+    min-height: 3.25rem;
+  }
+  .app-nav__brand {
+    font-size: 0.8125rem;
+  }
+  .learn-hero h1 {
+    font-size: 1.375rem;
   }
 }

@@ -1,0 +1,10 @@
+{
+  "name": "토지투자 배우기",
+  "short_name": "토지배우기",
+  "description": "토지투자 입문·실전 1.0 — 7장 코스",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#ea580c",
+  "lang": "ko"
+}
